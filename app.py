@@ -64,7 +64,7 @@ st.plotly_chart(fig1, use_container_width=True)
 st.subheader("2. 자치구별 탄소 절감량 (이동거리 기준)")
 
 # 이용정보2(대여소번호)와 대여소2(대여소번호PK) 합치기
-df_merged = pd.merge(df_usage, df_station, left_on='대여소번호', right_on='대여소번호PK')
+df_merged = pd.merge(df_usage, df_station, left_on='대여소번호', right_on='대여소번호')
 df_merged['탄소량'] = pd.to_numeric(df_merged['탄소량'], errors='coerce').fillna(0)
 
 # 자치구별 탄소량 모두 더하기
