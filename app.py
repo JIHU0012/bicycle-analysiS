@@ -10,7 +10,7 @@ from datetime import datetime
 st.set_page_config(page_title="서울시 공공자전거 분석 대시보드", layout="wide")
 
 # 1. 데이터베이스 파일 확인 (친절한 에러 메시지)
-db_path = '자전거 분석!.db'
+db_path = '자전거 분석.db'
 if not os.path.exists(db_path):
     st.error("🚨 앗! 데이터베이스 파일을 찾을 수 없어요.")
     st.info(f"현재 폴더에 '{db_path}' 파일이 있는지 꼭 확인해주세요! (GitHub에 같이 업로드 하셨는지 확인해주세요)")
